@@ -1,3 +1,12 @@
 [submodule "plugins/pack/all/start/nvim-lspconfig"]
 	path = plugins/pack/all/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "plugins/pack/all/start/plenary.nvim"]
+	path = plugins/pack/all/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "plugins/pack/all/start/telescope.nvim"]
+	path = plugins/pack/all/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "plugins/pack/all/start/telescope-live-grep-args.nvim"]
+	path = plugins/pack/all/start/telescope-live-grep-args.nvim
+	url = https://github.com/nvim-telescope/telescope-live-grep-args.nvim.git
