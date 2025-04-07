@@ -77,4 +77,8 @@ vim.cmd "set wildmode=longest:full,list,full"
  
 -- Turn off that terrible mouse support. Nooo thank you.
 vim.cmd "set mouse="
+
+-- Sometimes you dont know you need something until you do
+nnoremap('<esc>', ':noh<cr>')
+
  
