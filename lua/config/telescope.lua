@@ -9,7 +9,7 @@ nnoremaps({
    ['<leader>ff'] = telescope_builtin.find_files,
 
    -- Find buffers
-   ['<leader>fb'] = telescope_builtin.buffers,
+   ['<leader>b'] = telescope_builtin.buffers,
 
    -- Find with grep
    ["<leader>fg"] = ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",

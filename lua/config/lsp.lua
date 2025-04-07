@@ -8,7 +8,7 @@ local references = status and telescope_builtin.lsp_references or vim.lsp.buf.re
 lsp_normal = {
     ['gd'] = vim.lsp.buf.definition,
     ['gD'] = vim.lsp.buf.declaration,
-    ['er'] = references,
+    ['gr'] = references,
 }
 
 lsp_insert = {
@@ -35,6 +35,12 @@ end
   
 require('lspconfig')['basedpyright'].setup{
     on_attach = lsp_on_attach,
+    settings = {
+        basedpyright = {
+            typeCheckingMode = "standard",
+--            reportImplicitOverride = false,
+        },
+    },
 }
 
 -- -- Set keybindings when a language server is used

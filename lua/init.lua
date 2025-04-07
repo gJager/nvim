@@ -73,7 +73,7 @@ vim.o.updatetime = 300
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- Setup tab complete
-vim.cmd "set wildmode=longest:full,list,full"
+vim.cmd "set wildmode=longest:full,full"
  
 -- Turn off that terrible mouse support. Nooo thank you.
 vim.cmd "set mouse="
