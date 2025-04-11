@@ -31,5 +31,8 @@ require('telescope').setup({
         mappings = {
             i = telescope_insert,
         },
+        -- Make telescope fill active window, not float over middle
+        layout_strategy = 'current_buffer',
     },
 })
+
