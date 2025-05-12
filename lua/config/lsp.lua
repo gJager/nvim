@@ -43,6 +43,7 @@ vim.lsp.config('basedpyright', {
         },
     },
 })
+vim.lsp.enable('clangd')
 
 -- -- Set keybindings when a language server is used
 -- local on_attach = function(client, bufnr)
