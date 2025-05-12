@@ -42,7 +42,7 @@ vim.lsp.config('basedpyright', {
 --            reportImplicitOverride = false,
         },
     },
-}
+})
 
 -- -- Set keybindings when a language server is used
 -- local on_attach = function(client, bufnr)
