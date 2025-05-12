@@ -33,7 +33,8 @@ local lsp_on_attach = function(client, bufnr)
 end
 
   
-require('lspconfig')['basedpyright'].setup{
+vim.lsp.enable('basedpyright')
+vim.lsp.config('basedpyright', {
     on_attach = lsp_on_attach,
     settings = {
         basedpyright = {
