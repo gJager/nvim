@@ -3,11 +3,13 @@ print('loading mlsp')
 local status, telescope_builtin = pcall(require, 'telescope.builtin')
 
 local references = status and telescope_builtin.lsp_references or vim.lsp.buf.references
+local definition = status and telescope_builtin.lsp_definition or vim.lsp.buf.definition
+local declaration = status and telescope_builtin.lsp_declaration or vim.lsp.buf.declaration
 
 -- lsp normal
 lsp_normal = {
-    ['gd'] = vim.lsp.buf.definition,
-    ['gD'] = vim.lsp.buf.declaration,
+    ['gd'] = definition,
+    ['gD'] = declaration,
     ['gr'] = references,
 }
 
@@ -43,7 +45,13 @@ vim.lsp.config('basedpyright', {
         },
     },
 })
+
 vim.lsp.enable('clangd')
+vim.lsp.config('clangd', {
+    on_attach = lsp_on_attach,
+    settings = {
+    },
+})
 
 -- -- Set keybindings when a language server is used
 -- local on_attach = function(client, bufnr)

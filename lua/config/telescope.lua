@@ -20,8 +20,8 @@ telescope_insert = {
     -- I dont like their 'normal' mode. Close the telescope on escape.
     ["<esc>"] = telescope_actions.close,
 
-    -- Keybinding to quote current prompt. Useful for grep
-    -- Doesn't seem to work properly here.
+    ["<C-l>"] = telescope_actions.cycle_history_next,
+    ["<C-h>"] = telescope_actions.cycle_history_prev,
     -- ["<C-m>"] = lga_actions.quote_prompt(),
 }
 
