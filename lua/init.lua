@@ -1,7 +1,15 @@
 print("Loading config")
 
+-- ====================================================================
+-- Notes
+-- ====================================================================
+-- The plugins in path/to/start will all be loaded whether we have any
+--   config stuff or not.
 
+-- ====================================================================
 -- Setup paths so we can load our config
+-- ====================================================================
+
 config_dir = debug.getinfo(1).source:match("@?(.*/)") .. "/../"
 config_dir = vim.fn.resolve(config_dir)
 plugin_dir = config_dir .. '/plugins'
@@ -9,14 +17,24 @@ vim.opt.runtimepath:append(config_dir)
 vim.opt.runtimepath:append(plugin_dir)
 vim.opt.packpath:append(plugin_dir)
 
--- Load other config files
+-- ====================================================================
+-- Load other config files (order matters)
+-- ====================================================================
+
+-- Intro page
 require "config.intro"
-require "config.map"
+
+-- Helper functions
 require "config.util"
+
+-- Mappings should be before plugins so that we can make make groups of
+--   mappings that can be used by plugins
 require "config.mappings"
+
 require "config.telescope"
 require "config.lsp"
---require "treesitter"
+require "config.fzf"
+require('leap').set_default_mappings()
  
 local api = vim.api
  
