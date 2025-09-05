@@ -5,7 +5,7 @@ local status, fzf = pcall(require, 'fzf-lua')
 local find_files = status and fzf.files or '<nop>'
 local resume = status and fzf.resume or '<nop>'
 local buffers = status and fzf.buffers or '<nop>'
-local grep = status and fzf.grep_live or '<nop>'
+local grep = status and fzf.live_grep or '<nop>'
 
 local symbols = status and fzf.lsp_document_symbols or vim.lsp.buf.document_symbol
 local references = status and fzf.lsp_references or vim.lsp.buf.references
